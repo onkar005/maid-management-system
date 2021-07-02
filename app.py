@@ -6,10 +6,7 @@ from passlib.hash import sha256_crypt
 from functools import wraps
 from datetime import date, datetime
 import difflib
-import logging
 
-app.logger.addHandler(logging.StreamHandler(sys.stdout))
-app.logger.setLevel(logging.ERROR)
 
 #creating an app instance
 app = Flask(__name__)
