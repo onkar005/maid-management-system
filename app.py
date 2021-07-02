@@ -9,7 +9,7 @@ import difflib
 
 
 #creating an app instance
-app = Flask(__name__,template_folder='templates')
+app = Flask(__name__,template_folder='../templates',static_folder='../static')
 
 # Config MySQL
 app.config['MYSQL_HOST'] = 'localhost'
