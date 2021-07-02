@@ -413,8 +413,8 @@ def accept_request(id):
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port = port)
+    app.run(host='0.0.0.0', port = port, debug=True)
 
     app.secret_key = "secret123"
     #when the debug mode is on, we do not need to restart the server again and again
-    app.run(debug=True)
+
