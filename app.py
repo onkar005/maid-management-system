@@ -15,7 +15,7 @@ app = Flask(__name__)
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'Onkarbiyani5@'
-app.config['MYSQL_PORT'] =  process.env.PORT || 3000
+app.config['MYSQL_PORT'] =  process.env.PORT
 app.config['MYSQL_DB'] = 'maid'
 #we want results from the database to be returned as dictionary, by default its a tuple
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
