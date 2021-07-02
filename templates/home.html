@@ -1,0 +1,34 @@
+
+{% extends 'layout.html' %}
+{% block body %}
+    <div class="jumbotron mt-5">
+    <h1 class="display-4">Maid Management Web Application</h1>
+    {% if session.logged_in == NULL %}
+        <a href="/registeruser" class="btn btn-primary btn-lg">User Register</a>
+        <a href="/registermaid" class="btn btn-primary btn-lg ">Maid Register</a>
+        <a href="/login" class="btn btn-success btn-lg">Login</a>
+    {% endif %}
+    </div>
+    <div><h1 class="display-4">
+      <Marquee> 
+        Testimonials
+      </Marquee>
+     </h1> </div>    
+<div class="container-1" style="float: left inline-start">
+          
+            <img src="https://pbs.twimg.com/profile_images/1079984978614775808/PdK1njc-.jpg" alt="Avatar" style="width:90px">
+            <p style="font-size: large; color: rgb(231, 19, 19); padding:0%; margin: auto;">Ramesh Kumar.<p>
+            <p style="padding: 0%; margin: auto;"> Works at IT firm. </p>
+            <p>IMS helped me to find a perfect maid within my budget.</p> 
+            
+          </div>
+          
+          <div class="container-1" style="float: right inherit">
+            <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" style="width:90px">
+            <p><span >Varsha Agnihotri.</span></p>
+            <p style="padding: 0%; margin: auto;"> CEO at Company.</p>
+            <p>No one is better than IMS.</p>
+  </div>
+ 
+    
+{% endblock %}

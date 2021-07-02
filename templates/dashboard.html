@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+     <h1>Dashboard <small>Welcome {{session.username}}</small></h1>
+     <hr>
+     <h2>New Request</h2>
+     <a class="btn btn-success" href="/booking_form">Post New Request</a>
+     <hr>
+     <table class="table table-striped">
+         <thead>
+             <tr>
+                 <th>Maid Name</th>
+                 <th>Start Date</th>
+                 <th>End Date</th>
+                 <th>Payment</th>
+             </tr>
+         </thead>
+         <tbody>
+                 {% for b in accepted_request %}
+                <tr>
+                 <td>{{b.maid_username}}</td>
+                 <td>{{b.start_date}}</td>
+                 <td>{{b.end_date}}</td>
+                 <td>{{b.payment}}</td>
+                 </tr>
+                   {% endfor %}
+            </tbody>
+        </table>
+        <hr>
+        </div>
+{% endblock %}

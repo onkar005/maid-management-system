@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+     <h1>Dashboard <small>Welcome {{session.username}}</small></h1>
+     <h1>Maid Appointment</h1>
+     <hr>
+     <table class="table table-striped" style="border: 1mm; column-rule-color:whitesmoke;">
+         <thead>
+             <tr>
+                 <th>Request ID</th>
+                 <th>Customer Name</th>
+                 <th>Address</th>
+                 <th>Start Date</th>
+                 <th>End Date</th>
+                 <th>Total Days</th>
+                 <th>Monthy Payment</th>
+
+             </tr>
+         </thead>
+         <tbody>
+                 {% for b in booking %}
+                <tr>
+                 <td>{{b.id}}</td>
+                 <td>{{b.customer_name}}</td>
+                 <td>{{b.address}}</td>
+                 <td>{{b.start_date}}</td>
+                 <td>{{b.end_date}}</td>
+                 <td>{{b.total_days}}</td>
+                 <td>{{b.payment}}</td>
+                 <td>
+                 <form action="{{url_for('accept_request', id = b.id)}}" method="POST">
+                        <input type="hidden" name="method" value="DELETE" >
+                        <input type="submit" value="Accept" class="btn btn-success">
+                 </form>
+                 </td>
+                </tr>
+                {% endfor %}
+         </tbody>
+     </table>
+{% endblock %}

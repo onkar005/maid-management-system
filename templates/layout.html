@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Maid Management System</title>
+
+ <style>
+            
+            /* Modify the background color */
+            .navbar-expand-lg{
+                border: 2px solid rgb(12, 12, 12);
+                background-color: rgb(126, 235, 216);
+            }
+            .form-group{
+                
+                color: rgb(7, 7, 7);
+            }
+            .jumbotron{
+                border: 2px solid rgb(241, 118, 211);
+                color: rgb(50, 203, 214)
+            }
+            /* Modify brand and text color */
+            .navbar-nav,
+            .navbar-brand,
+            .nav-link {
+            
+                color: rgb(10, 10, 10);
+            }
+            .navbar-custom .navbar-brand,
+            .navbar-custom .navbar-text {
+                color: rgb(233, 89, 89);
+            }
+.container-1, .jumbotron  {
+  border: 2px solid rgb(12, 12, 12);
+  background-color: rgba(128, 237, 245, 0.342);
+  border-radius: 5px;
+  padding: 16px;
+  margin: 16px 0;
+}
+
+/* Clear floats after containers */
+.container-1::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Float images inside the container to the left. Add a right margin, and style the image as a circle */
+.container-1 img {
+  float: left;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+/* Increase the font-size of a span element */
+.container-1 span {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+/* Add media queries for responsiveness. This will center both the text and the image inside the container */
+@media (max-width: 500px) {
+  .container-1 {
+    text-align: center;
+  }
+
+  .container-1 img {
+    margin: auto;
+    float: none;
+    display: block;
+  }
+}
+
+    </style>
+   
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    </head>
+    <body>
+        {% include 'includes/_navbar.html' %}
+        <div class="container mt-16">
+            {% include 'includes/_messages.html' %}
+            {% block body %}{% endblock %}
+        </div>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+        
+       </body>
+</html>

@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<h1 style="margin-top: 0.5cm; padding: auto;">Maid Booking</h1>
+
+{% from "includes/_formhelpers.html" import render_field %}
+<form method="POST" action="" style="margin: auto; padding: auto; margin-top: 1cm;">
+    <div class="form-group">
+        {{render_field(form.mob_no, class_="form-control")}}
+    <div class="form-group">
+       {{render_field(form.start_date, class_="form-control" ,id="date"  ,type="date")}}
+    </div>
+    <div class="form-group">
+        {{render_field(form.end_date, class_="form-control" ,id="date"  ,type="date")}}
+    </div>
+    <div class="form-group">
+        {{render_field(form.job_req, class_="form-control")}}
+    </div>
+    <div class="form-group">
+        {{render_field(form.payment, class_="form-control")}}
+    </div>
+    <p><button type="submit" class="btn btn-primary" value="Submit">Submit</button></p>
+</form>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+     <h1>Maid Details</h1>
+     <hr>
+     <table class="table table-striped">
+         <thead>
+             <tr>
+                 <th>Name</th>
+                 <th>Skills</th>
+                 <th></th>
+                 <th></th>
+             </tr>
+         </thead>
+         <tbody>
+                 {% for m in maid %}
+                <tr>
+                 <td>{{m.name}}</td>
+                 <td><a href="booking_form/{{m.id}}" class="btn btn-primary pull-right">Book Now</a></td>
+                 <td>
+                     <form action="{{url_for('delete_location', id=location.location_id)}}" method="POST">
+                        <input type="hidden" name="method" value="DELETE">
+                        <input type="submit" value="Delete" class="btn btn-danger">
+                     </form>
+                 </td>
+                </tr>
+                {% endfor %}
+         </tbody>
+     </table>
+{% endblock %}
