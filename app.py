@@ -15,7 +15,7 @@ app = Flask(__name__)
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'Onkarbiyani5@'
-app.config['MYSQL_PORT'] =  process.env.PORT
+app.config['MYSQL_PORT'] =  3306
 app.config['MYSQL_DB'] = 'maid'
 #we want results from the database to be returned as dictionary, by default its a tuple
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
@@ -414,6 +414,7 @@ def accept_request(id):
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port = port)
+
     app.secret_key = "secret123"
     #when the debug mode is on, we do not need to restart the server again and again
     app.run(debug=True)
