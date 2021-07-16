@@ -12,7 +12,7 @@ import difflib
 app = Flask(__name__)
 
 # Config MySQL
-app.config['MYSQL_HOST'] = 'postgres://vjirmwgrznsiiy:a052c76e5450c489a7a06dc34f8bab1da2a62b2c829504def4516b7ed77a30bc@ec2-3-234-85-177.compute-1.amazonaws.com:5432/dfg0n9rlacsget'
+app.config['MYSQL_HOST'] = 'ec2-3-234-85-177.compute-1.amazonaws.com'
 app.config['MYSQL_USER'] = 'vjirmwgrznsiiy'
 app.config['MYSQL_PASSWORD'] = 'a052c76e5450c489a7a06dc34f8bab1da2a62b2c829504def4516b7ed77a30bc'
 app.config['MYSQL_PORT'] =  5432
